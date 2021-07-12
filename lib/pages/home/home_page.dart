@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_block_experto/bloc/home_bloc.dart';
-import 'package:flutter_block_experto/bloc/home_state.dart';
+import 'package:flutter_block_experto/pages/home/bloc/home_state.dart';
+
+import 'bloc/home_bloc.dart';
 
 class HomePage extends StatelessWidget {
   @override

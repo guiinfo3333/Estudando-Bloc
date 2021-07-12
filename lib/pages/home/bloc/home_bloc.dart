@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_block_experto/bloc/home_event.dart';
-import 'package:flutter_block_experto/bloc/home_state.dart';
+import 'package:flutter_block_experto/pages/home/bloc/home_event.dart';
+import 'package:flutter_block_experto/pages/home/bloc/home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent,HomeState>{
   HomeBloc(HomeState initialState) : super(HomeStateLoaded(list: []));

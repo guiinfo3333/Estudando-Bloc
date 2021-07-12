@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_block_experto/bloc/home_bloc.dart';
-import 'package:flutter_block_experto/bloc/home_event.dart';
-import 'package:flutter_block_experto/pages/home_page.dart';
+import 'package:flutter_block_experto/models/products.dart';
+import 'package:flutter_block_experto/pages/home/bloc/home_bloc.dart';
+import 'package:flutter_block_experto/pages/home/bloc/home_event.dart';
+import 'package:flutter_block_experto/pages/home/bloc/home_state.dart';
+import 'package:flutter_block_experto/pages/home/home_page.dart';
+import 'package:flutter_block_experto/pages/product/bloc/product_bloc.dart';
+import 'package:flutter_block_experto/pages/product/product_page.dart';
 
-import 'bloc/home_state.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,10 +31,14 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:BlocProvider<HomeBloc>(
-          create: (BuildContext context)=>HomeBloc(HomeStateLoaded(list: []))..add(HomeFecthListWithEmpty()),
-          child: HomePage()
-      ),
+      home:BlocProvider<ProductBloc>(
+          create: (BuildContext context)=>ProductBloc(),
+          child: ProductPage()
+      )
+      // BlocProvider<HomeBloc>(
+      //     create: (BuildContext context)=>HomeBloc(HomeStateLoaded(list: []))..add(HomeFecthListWithEmpty()),
+      //     child: HomePage()
+      // ),
     );
   }
 }
