@@ -1,6 +1,6 @@
 part of 'product_bloc.dart';
 
-abstract class ProductState extends Equatable {
+abstract class ProductState {
   const ProductState();
 }
 
@@ -15,6 +15,5 @@ class ProductDefaultState extends ProductState {
   final Product product;
   ProductDefaultState({required this.product});
 
-  @override
-  List<Object> get props => [product];
+
 }

@@ -9,7 +9,7 @@ part 'product_event.dart';
 part 'product_state.dart';
 
 class ProductBloc extends Bloc<ProductEvent, ProductState> {
-  ProductBloc() : super(ProductInitial());
+  ProductBloc() : super(ProductDefaultState(product: Product.empty()));
 
   Product _product = Product.empty();
 
